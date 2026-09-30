@@ -4,43 +4,59 @@
 
 # 📊 PredictivePulse
  
-## Customer Risk Explorer
+## Executive Customer Risk Explorer
 
-![Customer Risk Explorer](https://raw.githubusercontent.com/5H400W/predictivepulse-customer-churn-analytics/main/snapshot/customer-risk
-The Customer Risk Explorer enables business users to identify high-risk customers, review churn probabilities, and prioritize retention initiatives based on customer risk scores.
+![Customer Risk Explorer](customer-risk-exploree- Rate by Contract
 
----
-
-## Churn Rate by Contract
-
-![Churn Rate by Contract](snapshot/churn-Key Insight
-
-Customers on **Month-to-Month contracts** exhibit significantly higher churn rates than customers on One-Year or Two-Year contracts.
-
-Business Recommendation:
-
-- Introduce loyalty incentives
-- Promote longer-term contracts
-- Offer renewal discounts
+![Chn-rate-by-contract.png
 
 ---
 
 ## Churn Rate by Internet Service
 
-![Churn Rate by Internet Service](snapshotg
-
-### Key Insight
-
-Fiber Optic customers display higher churn behavior compared to DSL customers.
-
-Business Recommendation:
-
-- Review pricing strategies
-- Improve customer service experience
-- Investigate service quality concerns
+![Chn-rate-by-internet-service.png
 
 ---
 
+## Churn Rate by Payment Method
+
+![Churn Rate by Payment Method](churn-rate-by-payment-method.png)
+
+---
+
+## Customer Tenure Distribution
+
+![Customer Tenure Distribution](customer-tenure-distribution.png)
+
+---
+
+## Monthly Charges vs Churn
+
+![Monthly Charges vs Churn](monthly-charges-vs-churn.png)
+
+---
+
+## Feature Importance Analysis
+
+![Feature Importance](feature-importance.png)
+
+---
+
+## Top Churn Drivers
+
+![Top Churn Drivers](Top-Churn-Drivers-Screenshot.png)
+
+---
+
+## ROC Curve
+
+![ROC Curve](ROC-curve.png)
+
+---
+
+## Precision vs Recall Threshold Analysis
+
+![Precision vs Recall](precision-vs-recall.png)
 ## Churn Rate by Payment Method
 
 ![Churn Rate by Payment Method](snapshot/churn-rate-by-payment-method.png)
