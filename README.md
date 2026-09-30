@@ -1,15 +1,28 @@
 # 📊 PredictivePulse
 
-![Python](https://img.shields.io/badge/Python-3.14-blue?logo=python)
-![Pandas](g.shields.io/badge/Pandas-Data%20Engineering-blue?logo=pandas
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learningkitlearn
-![Streamimg.shields.io/badge/Streamlit-Dashboard-red?logo=streamlit
-![Plotly](https://img.shields.io/badge/Plotlyve%20Charts-green?logo=plotly
-![Random Forest](https://img.shields.io/badge/Modelsuccess
-![ROC-AUC](https://img.shields.io/badge/8225-brightgreen
-
+# 📊 PredictivePulse
+ 
+## Customer Churn Analytics & Prediction Platform
+ 
+PredictivePulse is an end-to-end Customer Churn Analytics and Machine Learning solution built using Python, Pandas, Scikit-Learn, Plotly, and Streamlit.
+ 
+The platform predicts customer churn, identifies retention opportunities, and provides actionable business insights through interactive visualizations and machine learning driven customer risk scoring.
+ 
 ---
-
+ 
+# 🚀 Executive Dashboard
+ 
+![Customerisk-exploree-snapsot.png
+ 
+The Executive Dashboard provides business users with:
+ 
+- Customer churn monitoring
+- Customer risk scoring
+- Model performance metrics
+- Customer retention insights
+- Interactive customer exploration
+ 
+---
 # 🎯 Customer Churn Analytics & Prediction Platform
 
 PredictivePulse is an end-to-end Customer Churn Analytics and Machine Learning solution designed to identify customers at risk of leaving a telecommunications provider.
