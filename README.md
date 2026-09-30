@@ -1,131 +1,115 @@
-# 📊 PredictivePulse
+<div align="center">
 
 # 📊 PredictivePulse
- 
-## Customer Churn Analytics & Prediction Platform
- 
-PredictivePulse is an end-to-end Customer Churn Analytics and Machine Learning solution built using Python, Pandas, Scikit-Learn, Plotly, and Streamlit.
- 
-The platform predicts customer churn, identifies retention opportunities, and provides actionable business insights through interactive visualizations and machine learning driven customer risk scoring.
- 
----
- 
-# 🚀 Executive Dashboard
- 
-![Customerisk-exploree-snapsot.png
- 
-The Executive Dashboard provides business users with:
- 
-- Customer churn monitoring
-- Customer risk scoring
-- Model performance metrics
-- Customer retention insights
-- Interactive customer exploration
- 
----
-# 🎯 Customer Churn Analytics & Prediction Platform
 
-PredictivePulse is an end-to-end Customer Churn Analytics and Machine Learning solution designed to identify customers at risk of leaving a telecommunications provider.
+### Customer Churn Analytics & Prediction Platform
 
-The project demonstrates the complete analytics lifecycle:
+End-to-end churn analytics: Medallion data pipeline → EDA → Random Forest model → risk scoring → interactive Streamlit dashboard.
+
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Processing-150458?logo=pandas&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Random%20Forest-F7931E?logo=scikitlearn&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-Visualization-3F4F75?logo=plotly&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit&logoColor=white)
+
+![Customer Risk Explorer](customer-risk-explorere-snapsot.png)
+
+</div>
+
+---
+
+## 📑 Table of Contents
+
+1. [Overview](#-overview)
+2. [Business Problem](#-business-problem)
+3. [Key Results](#-key-results)
+4. [Dataset](#-dataset)
+5. [Solution Architecture](#-solution-architecture)
+6. [Data Engineering Pipeline](#-data-engineering-pipeline)
+7. [Exploratory Data Analysis](#-exploratory-data-analysis)
+8. [Machine Learning Model](#-machine-learning-model)
+9. [Model Performance](#-model-performance)
+10. [Executive Dashboard](#-executive-dashboard)
+11. [Business Impact](#-business-impact)
+12. [Project Structure](#-project-structure)
+13. [Getting Started](#-getting-started)
+14. [Technology Stack](#-technology-stack)
+15. [Author](#-author)
+
+---
+
+## 🎯 Overview
+
+**PredictivePulse** is an end-to-end customer churn analytics and machine learning solution built for a telecommunications provider. It covers the full analytics lifecycle, from raw data ingestion to an interactive dashboard that retention teams can use to act on churn risk.
 
 ```text
-Data Ingestion
-      ↓
-Data Cleansing
-      ↓
-Feature Engineering
-      ↓
-Exploratory Analysis
-      ↓
-Machine Learning
-      ↓
-Risk Scoring
-      ↓
-Interactive Dashboard
+Data Ingestion → Data Cleansing → Feature Engineering → Exploratory Analysis
+              → Machine Learning → Risk Scoring → Interactive Dashboard
 ```
 
-The objective is not only to predict churn but also to provide actionable business insights that can help customer retention teams proactively reduce customer attrition.
+The goal is not only to predict churn, but to explain **why** customers leave and give business teams actionable insight to reduce attrition proactively.
 
 ---
 
-# 🚀 Business Problem
+## 🚀 Business Problem
 
-Customer churn is one of the most important metrics for subscription businesses.
+Churn is one of the most critical metrics for any subscription business. Every lost customer means:
 
-When customers leave:
+- Lower recurring revenue
+- Higher acquisition costs to replace them
+- Reduced Customer Lifetime Value (CLV)
+- Slower business growth
 
-- Revenue decreases
-- Acquisition costs increase
-- Customer Lifetime Value decreases
-- Business growth slows
+This project answers four questions:
 
-This project answers:
-
-- Which customers are likely to churn?
-- Why are customers leaving?
-- Which customer segments are most at risk?
-- How can retention teams act before churn occurs?
+1. Which customers are most likely to churn?
+2. Why are customers leaving?
+3. Which segments are most at risk?
+4. How can retention teams act *before* churn happens?
 
 ---
 
-# 📂 Dataset Overview
+## 📊 Key Results
 
-The project uses the Telco Customer Churn dataset containing information for:
-
-```text
-Total Customers: 7,043
-```
-
-The dataset includes:
-
-### Customer Information
-
-- Gender
-- Senior Citizen
-- Partner Status
-- Dependents
-
-### Services
-
-- Internet Service
-- Phone Service
-- Online Security
-- Online Backup
-- Technical Support
-- Streaming Services
-
-### Financial Metrics
-
-- Monthly Charges
-- Total Charges
-- Contract Type
-- Payment Method
-
-### Target Variable
-
-```text
-Churn (Yes / No)
-```
+| Metric | Result |
+|---|---|
+| Total Customers Analysed | 7,043 |
+| Overall Churn Rate | 26.54% |
+| Model Accuracy | 76.58% |
+| ROC-AUC Score | 0.8225 |
+| Recommended Decision Threshold | 0.40 |
+| Precision @ 0.40 | 51.19% |
+| Recall @ 0.40 | 74.87% |
+| High-Risk Customers Identified | 1,724 |
 
 ---
 
-# 🏗️ Solution Architecture
+## 📂 Dataset
+
+The project uses the **Telco Customer Churn** dataset (7,043 customers).
+
+| Category | Features |
+|---|---|
+| **Customer Profile** | Gender, Senior Citizen, Partner, Dependents |
+| **Services** | Internet Service, Phone Service, Online Security, Online Backup, Tech Support, Streaming |
+| **Financial** | Monthly Charges, Total Charges, Contract Type, Payment Method |
+| **Target** | `Churn` (Yes / No) |
+
+---
+
+## 🏗️ Solution Architecture
 
 ```text
 Raw Customer Dataset
         │
         ▼
-Bronze Layer
-(Data Ingestion)
+🥉 Bronze Layer  → Data ingestion & raw preservation
         │
         ▼
-Silver Layer
-(Data Cleansing)
+🥈 Silver Layer  → Cleansing & data quality validation
         │
         ▼
-Gold Layer
-(Feature Engineering)
+🥇 Gold Layer    → Feature engineering
         │
         ▼
 Exploratory Data Analysis
@@ -137,402 +121,249 @@ Random Forest Model
 Customer Risk Scoring
         │
         ▼
-Executive Dashboard
+Executive Dashboard (Streamlit)
 ```
 
 ---
 
-# ⚙️ Data Engineering Pipeline
+## ⚙️ Data Engineering Pipeline
 
-## Bronze Layer
+The pipeline follows the **Medallion Architecture** (Bronze → Silver → Gold).
 
-Purpose:
+### 🥉 Bronze Layer — Raw Ingestion
 
-Store raw source data exactly as received.
-
-### Activities
+**Purpose:** Store source data exactly as received.
 
 - Source validation
 - Data ingestion
 - Raw data preservation
 
----
+### 🥈 Silver Layer — Cleansing & Validation
 
-## Silver Layer
-
-Purpose:
-
-Prepare clean, trustworthy data.
-
-### Activities
+**Purpose:** Produce clean, trustworthy data.
 
 - Null handling
 - Datatype conversion
 - Duplicate verification
-- Data quality validation
+- Data quality checks
 
-### Results
+| Check | Result |
+|---|---|
+| Records Processed | 7,043 |
+| Duplicates Found | 0 |
+| Missing Values | 0 |
 
-```text
-Records Processed : 7,043
-Duplicates Found : 0
-Missing Values : 0
-```
+### 🥇 Gold Layer — Feature Engineering
 
----
+**Purpose:** Create business-ready analytical features.
 
-## Gold Layer
-
-Purpose:
-
-Create business-ready analytical features.
-
-### Feature Engineering
-
-#### Customer Lifetime Value
-
-```python
-MonthlyCharges * tenure
-```
-
-Used to estimate customer value.
+| Feature | Description |
+|---|---|
+| `CLV` (Customer Lifetime Value) | `MonthlyCharges * tenure` — estimates customer value |
+| `HighValueCustomer` | Flags premium-paying customers |
+| `LongTermCustomer` | Flags customers retained for 24+ months |
+| `ServiceCount` | Number of active value-added services |
 
 ---
 
-#### High Value Customer
+## 📈 Exploratory Data Analysis
 
-Identifies premium-paying customers.
+EDA was performed to understand customer behaviour before modelling.
 
----
+### 1️⃣ Churn Rate by Contract Type
 
-#### Long Term Customer
+![Churn Rate by Contract](churn-rate-by-contract.png)
 
-Identifies customers retained for 24+ months.
-
----
-
-#### Service Count
-
-Measures the number of active value-added services.
-
----
-
-# 📈 Exploratory Data Analysis
-
-The purpose of Exploratory Data Analysis was to understand customer behavior before building predictive models.
-
----
-
-# Churn Rate by Contract
-
-churn-rate-by-contract.png
-
-### Why Analyze Contract Type?
-
-Contract length is typically associated with customer loyalty and retention.
-
-### What We Found
+Contract length is a classic indicator of loyalty.
 
 | Contract Type | Churn Rate |
-|---------------|------------|
+|---|---|
 | Month-to-Month | 42.71% |
 | One Year | 11.27% |
 | Two Year | 2.83% |
 
-### Business Insight
-
-Customers on Month-to-Month contracts are significantly more likely to churn.
-
-### Recommendation
-
-- Encourage annual contracts
-- Offer renewal incentives
-- Introduce loyalty discounts
+**Insight:** Month-to-Month customers are far more likely to churn.
+**Recommendation:** Promote annual contracts, offer renewal incentives and loyalty discounts.
 
 ---
 
-# Churn Rate by Internet Service
+### 2️⃣ Churn Rate by Internet Service
 
-churn-rate-by-internet-service.png
+![Churn Rate by Internet Service](churn-rate-by-internet-service.png)
 
-### Why Analyze Internet Service?
-
-Internet service quality and pricing often impact customer satisfaction.
-
-### What We Found
-
-Fiber Optic customers experience the highest churn rates.
-
-### Business Insight
-
-Potential causes:
-
-- Pricing concerns
-- Service quality issues
-- Competitive alternatives
-
-### Recommendation
-
-Review service quality and customer feedback within Fiber segments.
+**Finding:** Fiber Optic customers show the highest churn.
+**Possible causes:** pricing concerns, service quality issues, competitive alternatives.
+**Recommendation:** Review service quality and customer feedback within the Fiber segment.
 
 ---
 
-# Churn Rate by Payment Method
+### 3️⃣ Churn Rate by Payment Method
 
-![Payment Method Analysis](churn-rate-by-payment-method.png)
+![Churn Rate by Payment Method](churn-rate-by-payment-method.png)
 
-### Why Analyze Payment Methods?
-
-Payment behavior often reveals engagement and convenience preferences.
-
-### What We Found
-
-Electronic Check customers display the highest churn frequency.
-
-### Recommendation
-
-Encourage customers to adopt automated payment methods.
+**Finding:** Electronic Check customers show the highest churn.
+**Recommendation:** Encourage migration to automated payment methods (auto-debit / credit card).
 
 ---
 
-# Customer Tenure Distribution
+### 4️⃣ Customer Tenure Distribution
 
 ![Customer Tenure Distribution](customer-tenure-distribution.png)
 
-### Why Analyze Tenure?
-
-Tenure is one of the strongest indicators of customer loyalty.
-
-### What We Found
-
-Customers with lower tenure are considerably more likely to leave.
-
-### Business Recommendation
-
-Focus retention campaigns during the first 24 months.
+**Finding:** Low-tenure customers are considerably more likely to leave.
+**Recommendation:** Focus onboarding and retention campaigns on the first 24 months.
 
 ---
 
-# Monthly Charges vs Churn
+### 5️⃣ Monthly Charges vs Churn
 
 ![Monthly Charges vs Churn](monthly-charges-vs-churn.png)
 
-### Why Analyze Monthly Charges?
-
-Pricing often directly influences retention.
-
-### What We Found
-
-Customers with higher monthly charges tend to churn more frequently.
-
-### Recommendation
-
-Review pricing strategy and loyalty incentives for higher-paying customers.
+**Finding:** Customers with higher monthly charges churn more frequently.
+**Recommendation:** Review pricing strategy and introduce loyalty incentives for high-paying customers.
 
 ---
 
-# 🤖 Machine Learning Model
+## 🤖 Machine Learning Model
 
-## Algorithm
+**Algorithm:** Random Forest Classifier
 
-```text
-Random Forest Classifier
-```
-
-### Why Random Forest?
+**Why Random Forest?**
 
 - Handles categorical and numeric features well
-- Provides feature importance
 - Captures non-linear relationships
+- Provides built-in feature importance
 - Robust against overfitting
 
----
-
-# Feature Importance Analysis
+### Feature Importance
 
 ![Feature Importance](feature-importance.png)
 
-The model identified the following top churn drivers:
+Top churn drivers identified by the model:
 
-1. Total Charges
-2. Customer Lifetime Value
-3. Monthly Charges
-4. Tenure
-5. Contract Type
-6. Online Security
-7. Technical Support
-8. Payment Method
+| Rank | Feature |
+|---|---|
+| 1 | Total Charges |
+| 2 | Customer Lifetime Value |
+| 3 | Monthly Charges |
+| 4 | Tenure |
+| 5 | Contract Type |
+| 6 | Online Security |
+| 7 | Technical Support |
+| 8 | Payment Method |
 
-These variables were the strongest contributors to churn prediction.
-
----
-
-# Top Churn Drivers
+### Top Churn Drivers (Dashboard View)
 
 ![Top Churn Drivers](Top-Churn-Drivers-Screenshot.png)
 
-Understanding the top drivers allows business teams to focus retention activities where they will have the greatest impact.
+Understanding the main drivers lets business teams focus retention efforts where they will have the greatest impact.
 
 ---
 
-# 📊 Model Performance
+## 📊 Model Performance
 
-## ROC Curve
+### ROC Curve
 
 ![ROC Curve](ROC-curve.png)
 
-### ROC-AUC Score
+**ROC-AUC = 0.8225** — a score above 0.80 indicates strong discriminative ability between churning and retained customers.
 
-```text
-0.8225
-```
-
-### Interpretation
-
-A ROC-AUC score above 0.80 indicates strong predictive capability and reliable customer classification performance.
-
----
-
-# Threshold Optimization
+### Threshold Optimization
 
 ![Precision vs Recall](precision-vs-recall.png)
 
-### Why Threshold Tuning?
+In churn prediction, **missing a customer who will leave costs more than contacting one who would have stayed**. The default 0.50 threshold was therefore tuned to favour recall while keeping precision acceptable.
 
-In churn prediction, missing a customer who is likely to leave is often more expensive than contacting a customer who would stay.
+| Threshold | Precision | Recall |
+|---|---|---|
+| **0.40 (recommended)** | 51.19% | 74.87% |
 
-Therefore, threshold optimization was performed to balance:
+At 0.40 the model captures roughly three out of four churning customers, giving retention teams a practical, cost-aware target list.
 
-- Precision
-- Recall
-- Retention Costs
+---
 
-### Recommended Threshold
+## 🚨 Executive Dashboard
+
+The Streamlit dashboard gives business users a self-service view of churn risk:
+
+- Customer churn monitoring
+- Customer risk scoring
+- Model performance metrics
+- Retention insights
+- Search and explore individual customers
+- Prioritise high-risk accounts
+
+### Customer Risk Explorer
+
+![Customer Risk Explorer](customer-risk-explorere-snapsot.png)
+
+---
+
+## 💼 Business Impact
+
+- Identify churn risk proactively instead of reactively
+- Prioritise retention campaigns by risk score
+- Increase Customer Lifetime Value
+- Understand behavioural drivers of attrition
+- Focus limited retention budget on high-risk customers
+- Enable data-driven decision-making
+
+---
+
+## 🗂️ Project Structure
 
 ```text
-0.40
-```
-
-### Performance at 0.40
-
-```text
-Precision : 51.19%
-Recall    : 74.87%
-```
-
-This threshold captures the majority of churning customers while maintaining reasonable prediction quality.
-
----
-
-# 🚨 Customer Risk Explorer
-
-customer-risk-exploree-snapsot.png
-
-The dashboard includes a Customer Risk Explorer allowing business users to:
-
-- Search customers
-- Review churn probabilities
-- Identify high-risk accounts
-- Prioritize retention initiatives
-
----
-
-# 📊 Final Results
-
-| Metric | Result |
-|----------|----------|
-| Total Customers Analysed | 7,043 |
-| Churn Rate | 26.54% |
-| Model Accuracy | 76.58% |
-| ROC-AUC Score | 0.8225 |
-| Recommended Threshold | 0.40 |
-| Recall @ Threshold 0.40 | 74.87% |
-| High-Risk Customers Identified | 1,724 |
-
----
-
-# 🏆 Key Achievements
-
-### Data Engineering
-
-✅ Medallion Architecture
-
-✅ ETL Pipeline Development
-
-✅ Data Quality Validation
-
-✅ Feature Engineering
-
----
-
-### Analytics
-
-✅ Customer Churn Analysis
-
-✅ Contract Analysis
-
-✅ Internet Service Analysis
-
-✅ Payment Method Analysis
-
-✅ Customer Tenure Analysis
-
----
-
-### Machine Learning
-
-✅ Random Forest Classification
-
-✅ Feature Importance Analysis
-
-✅ ROC-AUC Evaluation
-
-✅ Threshold Optimization
-
-✅ Customer Risk Scoring
-
----
-
-# 💼 Business Impact
-
-The solution enables organizations to:
-
-- Identify churn risks proactively
-- Prioritize retention campaigns
-- Increase customer lifetime value
-- Understand customer behavior
-- Focus resources on high-risk customers
-- Support data-driven decision-making
-
----
-
-# 🛠️ Technology Stack
-
-```text
-Python
-Pandas
-NumPy
-Scikit-Learn
-Plotly
-Matplotlib
-Streamlit
-Joblib
-GitHub
+predictivepulse-customer-churn-analytics/
+├── dashboard/          # Streamlit application
+├── data/               # Bronze / Silver / Gold datasets
+├── src/                # Pipeline, feature engineering & model code
+├── *.png               # Analysis & dashboard screenshots
+├── requirements.txt    # Python dependencies
+└── README.md
 ```
 
 ---
 
-# 👨‍💻 Author
+## ▶️ Getting Started
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/5H400W/predictivepulse-customer-churn-analytics.git
+cd predictivepulse-customer-churn-analytics
+
+# 2. Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Launch the dashboard
+streamlit run dashboard/app.py
+```
+
+---
+
+## 🛠️ Technology Stack
+
+| Area | Tools |
+|---|---|
+| Language | Python |
+| Data Processing | Pandas, NumPy |
+| Machine Learning | Scikit-Learn, Joblib |
+| Visualization | Plotly, Matplotlib |
+| Dashboard | Streamlit |
+| Version Control | Git, GitHub |
+
+---
+
+## 👨‍💻 Author
 
 **Prashant Dwivedi**
+Data Engineering | Data Architecture | Data Analytics | Machine Learning | Gen AI | RAG
 
-Machine Learning | Gen AI | RAG | Data Architecture | Data Analytics | Data Engineering
-
-🔗 GitHub: https://github.com/5H400W
-
-🔗 LinkedIn: https://www.linkedin.com/in/prashant-dwivedi-5532b3190/
+🔗 [GitHub](https://github.com/5H400W) · [LinkedIn](https://www.linkedin.com/in/prashant-dwivedi-5532b3190/)
 
 ---
 
 ⭐ If you found this project useful, consider giving it a star.
- 
