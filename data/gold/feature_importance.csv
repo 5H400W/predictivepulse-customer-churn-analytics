@@ -1,0 +1,50 @@
+Feature,Importance
+num__TotalCharges,0.10655265755771604
+num__CustomerLifetimeValue,0.10221776999427756
+num__MonthlyCharges,0.10138165975370285
+num__tenure,0.0995185008021709
+cat__Contract_Month-to-month,0.06458897286675915
+cat__OnlineSecurity_No,0.04032615492491543
+cat__TechSupport_No,0.033815436583904436
+cat__Contract_Two year,0.030708180630394908
+cat__PaymentMethod_Electronic check,0.024912293192023597
+cat__InternetService_Fiber optic,0.024172570710663772
+num__ServiceCount,0.023974715609697234
+num__LongTermCustomer,0.022184570831146267
+cat__OnlineBackup_No,0.014699765728791416
+cat__gender_Female,0.014312948054175562
+cat__gender_Male,0.014252670791643664
+num__SeniorCitizen,0.01357048635655595
+cat__PaperlessBilling_Yes,0.012987152307440733
+cat__Contract_One year,0.012968570388125133
+cat__PaperlessBilling_No,0.012896802191949275
+cat__Partner_Yes,0.011934536875220695
+cat__DeviceProtection_No,0.011655076422765904
+cat__Partner_No,0.01154156110856381
+cat__PaymentMethod_Bank transfer (automatic),0.011232820788745969
+cat__PaymentMethod_Credit card (automatic),0.01092699447458057
+cat__InternetService_DSL,0.010874193063160734
+cat__Dependents_Yes,0.010405733539873282
+cat__Dependents_No,0.010320801012284542
+cat__MultipleLines_No,0.010271130952846938
+cat__OnlineSecurity_Yes,0.010002314481984407
+cat__OnlineBackup_Yes,0.009714189745469663
+cat__MultipleLines_Yes,0.009710985490479813
+cat__TechSupport_Yes,0.00951241278146994
+cat__PaymentMethod_Mailed check,0.009434426615491416
+cat__StreamingMovies_Yes,0.008666968165598659
+cat__StreamingTV_Yes,0.00858165478777351
+cat__DeviceProtection_Yes,0.008530345704325712
+cat__StreamingTV_No,0.008250760189776113
+cat__StreamingMovies_No,0.008121298976331754
+num__HighValueCustomer,0.006883685113494496
+cat__DeviceProtection_No internet service,0.004548683120622168
+cat__StreamingMovies_No internet service,0.0045208504694130664
+cat__OnlineBackup_No internet service,0.003806869416626608
+cat__InternetService_No,0.0033929607182081214
+cat__StreamingTV_No internet service,0.003337552647077653
+cat__OnlineSecurity_No internet service,0.0030320165571932393
+cat__TechSupport_No internet service,0.002836112169517206
+cat__MultipleLines_No phone service,0.00266358462004012
+cat__PhoneService_No,0.002639685268829826
+cat__PhoneService_Yes,0.0026079154461801195
