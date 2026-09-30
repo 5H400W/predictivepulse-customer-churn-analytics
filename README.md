@@ -1,99 +1,161 @@
-# 📊 PredictivePulse
+# 📸 Dashboard Preview
 
-![Python][(https://img.shields.io/badge/Python?logo=python](https://github.com/5H400W/predictivepulse-customer-churn-analytics/blob/main/snapshot/Top-Churn-Drivers-Screenshot.png)
-![Pandas](https://img.shields.io/badge/Pandas-Dataring-blue?logo=pandas
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machinege?logo=scikitlearn
-![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-amlit
-![Plotly](https://img.shields.io/badge/Plottive%20Charts-green?logo=plotly
-![Random Forest](https://img.shields.io/badge/Modelsuccess
-![ROC-AUC](https://img.shields.io/badge/ROC--AUC-0.822en
+## Executive Customer Risk Explorer
+
+![Customerustomer-risk-explorer-snapshot.png
+
+The Customer Risk Explorer enables business users to identify high-risk customers, review churn probabilities, and prioritize retention initiatives based on customer risk scores.
 
 ---
 
-## 🚀 Live Demo
+## Churn Rate by Contract
 
-**Deployment Coming Soon**
+![Churn Rate by Contract](snapshot/churn-Key Insight
+
+Customers on **Month-to-Month contracts** exhibit significantly higher churn rates than customers on One-Year or Two-Year contracts.
+
+Business Recommendation:
+
+- Introduce loyalty incentives
+- Promote longer-term contracts
+- Offer renewal discounts
+
+---
+
+## Churn Rate by Internet Service
+
+![Churn Rate by Internet Service](snapshotg
+
+### Key Insight
+
+Fiber Optic customers display higher churn behavior compared to DSL customers.
+
+Business Recommendation:
+
+- Review pricing strategies
+- Improve customer service experience
+- Investigate service quality concerns
+
+---
+
+## Churn Rate by Payment Method
+
+![Churn Rate by Payment Method](snapshot/churn-rate-by-payment-method.png)
+
+Electronic Check have substantially higher churn rates compared to automated payment methods.
+
+Business Recommendation:
+
+- Encourage automated payment enrollment
+- Offer incentives for recurring payments
+
+---
+
+## Customer Tenure Distribution
+
+snapshot/customer-tenure-distribution.png
+
+### Key Insight
+
+Customers with shorter tenure are significantly more likely to churn.
+
+Business Recommendation:
+
+- Focus retention efforts during the first 24 months
+- Implement onboarding engagement programs
+
+---
+
+## Monthly Charges vs Churn
+
+snapshot/monthly-charges-vs-churn.png
+
+### Key Insight
+
+Higher monthly charges correlate with increased customer churn.
+
+Business Recommendation:
+
+- Review pricing plans
+- Introduce loyalty discounts for high-value customers
+
+---
+
+## Feature Importance Analysis
+
+snapshot/feature-importance.png
+
+The Random Forest model identified the most influential features contributing to customer churn predictions.
+
+Top predictive variables include:
+
+- Total Charges
+- Customer Lifetime Value
+- Monthly Charges
+- Tenure
+- Contract Type
+- Online Security
+- Technical Support
+- Payment Method
+
+---
+
+## Top Churn Drivers
+
+snapshot/Top-Churn-Drivers-Screenshot.png
+
+The model highlights the variables contributing most significantly to customer churn, providing actionable insights for customer retention teams.
+
+---
+
+# 🤖 Machine Learning Performance
+
+## ROC Curve
+
+snapshot/ROC-curve.png
+
+### ROC-AUC Score
 
 ```text
-https://predictivepulse.streamlit.app
+0.8225
 ```
+
+An AUC score above 0.80 indicates strong predictive performance and reliable customer churn classification.
 
 ---
 
-# 🎯 Project Overview
+## Precision vs Recall Threshold Tuning
 
-PredictivePulse is an end-to-end Customer Churn Analytics and Prediction Platform built using Python, Pandas, Scikit-Learn, Plotly, and Streamlit.
+snapshot/precision-vs-recall.png
 
-The solution follows a Medallion Architecture inspired approach consisting of:
+Threshold optimization was performed to balance:
+
+- Precision
+- Recall
+- Retention Campaign Costs
+
+### Recommended Threshold
 
 ```text
-Raw Data
-   ↓
-Bronze Layer
-   ↓
-Silver Layer
-   ↓
-Gold Layer
-   ↓
-Feature Engineering
-   ↓
-Machine Learning
-   ↓
-Risk Scoring
-   ↓
-Executive Dashboard
+0.40
 ```
 
-The project demonstrates real-world skills in:
-
-- Data Engineering
-- ETL Development
-- Exploratory Data Analysis
-- Customer Analytics
-- Machine Learning
-- Model Evaluation
-- Business Intelligence
-- Dashboard Development
-
----
-
-# 🏗️ Architecture
+### Performance @ Threshold 0.40
 
 ```text
-Raw Customer Dataset
-        │
-        ▼
-Bronze Layer
-(Data Ingestion)
-        │
-        ▼
-Silver Layer
-(Data Cleansing)
-        │
-        ▼
-Gold Layer
-(Feature Engineering)
-        │
-        ▼
-Exploratory Analysis
-        │
-        ▼
-Random Forest Model
-        │
-        ▼
-Customer Risk Scoring
-        │
-        ▼
-Interactive Dashboard
+Precision : 51.19%
+Recall    : 74.87%
 ```
+
+This threshold maximizes churn detection while maintaining a manageable number of false positives.
 
 ---
 
-# 📊 Project Achievements
+# 🏆 What Was Achieved
 
-## Data Engineering
+### Data Engineering
 
-✅ Implemented Medallion Architecture
+✅ Medallion Architecture Implementation
 
 ```text
 Bronze
@@ -103,305 +165,77 @@ Silver
 Gold
 ```
 
-✅ Automated ETL Pipeline
+✅ ETL Pipeline Development
 
 ✅ Data Quality Validation
 
-✅ Feature Engineering Pipeline
+✅ Feature Engineering
 
 ---
 
-## Analytics
+### Analytics
 
-✅ Churn Trend Analysis
+✅ Customer Churn Analysis
 
-✅ Contract Analysis
+✅ Contract Analytics
 
-✅ Internet Service Analysis
+✅ Internet Service Analytics
 
-✅ Payment Method Analysis
+✅ Payment Method Analytics
 
 ✅ Customer Tenure Analysis
 
-✅ Revenue Behavior Analysis
+✅ Business Insight Generation
 
 ---
 
-## Machine Learning
+### Machine Learning
 
 ✅ Random Forest Classification
 
 ✅ Feature Importance Analysis
 
-✅ ROC-AUC Model Evaluation
+✅ ROC-AUC Evaluation
 
-✅ Threshold Optimization
+✅ Threshold Tuning
 
-✅ Customer Risk Scoring Engine
+✅ Customer Risk Segmentation
+
+✅ High-Risk Customer Identification
 
 ---
 
-# 📈 Business Results
+# 📊 Final Results
 
-| Metric | Value |
+| Metric | Result |
 |----------|----------|
-| Total Customers Analyzed | 7,043 |
+| Total Customers Analysed | 7,043 |
 | Churn Rate | 26.54% |
 | Model Accuracy | 76.58% |
 | ROC-AUC Score | 0.8225 |
 | Recommended Threshold | 0.40 |
 | Recall @ Threshold 0.40 | 74.87% |
-| High Risk Customers Identified | 1,724 |
+| High-Risk Customers Identified | 1,724 |
 
 ---
 
-# 📸 Dashboard Preview
-
-## Executive Dashboard
-
-The dashboard provides business users with customer churn insights, machine learning predictions, and retention opportunities.
-
-![Executiveustomer-risk-explorer.png
-
----
-
-## Churn Rate by Contract
-
-Month-to-Month customers show significantly higher churn rates compared to annual contract customers.
-
-snapshots/churn-rate-by-contract.png
-
----
-
-## Churn Rate by Internet Service
-
-Fiber Optic customers have the highest churn behavior within the customer base.
-
-snapshots/churn-rate-by-internet-service.png
-
----
-
-## Churn Rate by Payment Method
-
-Electronic Check customers display significantly higher churn rates than customers using automated payment methods.
-
-snapshots/churn-rate-by-payment-method.png
-
----
-
-## Customer Tenure Distribution
-
-Long-term customers show lower churn tendencies compared to newly acquired customers.
-
-snapshots/customer-tenure-distribution.png
-
----
-
-## Monthly Charges vs Churn
-
-Higher monthly charges are associated with an increased likelihood of customer churn.
-
-snapshots/monthly-charges-vs-churn.png
-
----
-
-## Feature Importance Analysis
-
-The Random Forest model identifies the strongest churn drivers.
-
-snapshots/feature-importance.png
-
----
-
-## Top Churn Drivers
-
-The following variables contribute most strongly to churn prediction:
-
-- Total Charges
-- Customer Lifetime Value
-- Monthly Charges
-- Tenure
-- Contract Type
-- Online Security
-- Tech Support
-- Electronic Check Payment Method
-
-![Top Churn Drivers-drivers.png
-
----
-
-# 🤖 Model Performance
-
-## ROC Curve
-
-The ROC Curve evaluates how effectively the model separates churned customers from retained customers.
-
-### ROC-AUC Score
-
-```text
-0.8225
-```
-
-An ROC-AUC above 0.80 indicates strong predictive capability.
-
-snapshots/roc-curve.png
-
----
-
-## Threshold Optimization
-
-Threshold tuning was performed to determine the optimal balance between Precision and Recall.
-
-### Recommended Threshold
-
-```text
-0.40
-```
-
-### Performance at 0.40
-
-```text
-Precision : 51.19%
-Recall    : 74.87%
-```
-
-This threshold maximizes churn detection while keeping false positives within an acceptable range.
-
-snapshots/precision-vs-recall.png
-
----
-
-# 🔍 Customer Risk Explorer
-
-The solution generates customer-level churn scores.
-
-Features include:
-
-- Churn Probability
-- Predicted Churn Status
-- Risk Category
-- Contract Information
-- Monthly Charges
-- Customer Tenure
-
-This enables retention teams to proactively target high-risk customers.
-
-snapshots/customer-risk-explorer.png
-
----
-
-# 🧠 Key Business Insights
-
-### Contract Type Matters
-
-Customers with Month-to-Month contracts have substantially higher churn rates.
-
-### Payment Behavior is Predictive
-
-Electronic Check customers represent the highest-risk segment.
-
-### Customer Lifetime Value Matters
-
-Higher-value customers require proactive retention efforts because of their revenue impact.
-
-### Customer Tenure Reduces Churn
-
-Long-term customers are significantly more loyal than new customers.
-
----
-
-# 💻 Technology Stack
-
-## Data Engineering
-
-- Python
-- Pandas
-- NumPy
-
-## Machine Learning
-
-- Scikit-Learn
-- Random Forest
-
-## Visualization
-
-- Plotly
-- Matplotlib
-- Streamlit
-
-## Model Persistence
-
-- Joblib
-
-## Version Control
-
-- Git
-- GitHub
-
----
-
-# ▶️ How to Run
-
-## Clone Repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/PredictivePulse.git
-```
-
-## Create Environment
-
-```bash
-python -m venv venv
-```
-
-## Activate Environment
-
-```bash
-venv\Scripts\activate
-```
-
-## Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-## Run Full Pipeline
-
-```bash
-python src/ingestion.py
-
-python src/cleaning.py
-
-python src/feature_engineering.py
-
-python src/eda.py
-
-python src/train_model.py
-
-python src/predict.py
-```
-
-## Launch Dashboard
-
-```bash
-streamlit run dashboard/app.py
-```
-
----
-
-# 🔮 Future Enhancements
-
-- XGBoost Implementation
-- MLflow Integration
-- Explainable AI (SHAP)
-- Azure Databricks Migration
-- PySpark Processing
-- Revenue At Risk Forecasting
-- Real-Time Prediction API
-- Customer Retention Recommendation Engine
-
----
+# 💼 Portfolio Value
+
+This project demonstrates practical experience in:
+
+- Data Engineering
+- ETL Design
+- Feature Engineering
+- Exploratory Data Analysis
+- Machine Learning
+- Model Evaluation
+- Threshold Optimization
+- Customer Analytics
+- Business Intelligence
+- Dashboard Development
+
+The solution mirrors real-world customer analytics workflows used across Telecommunications, SaaS, Banking, Subscription Services, and Customer Retention Programs.
+``
 
 # 👨‍💻 Author
 
