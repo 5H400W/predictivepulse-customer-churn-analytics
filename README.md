@@ -1,12 +1,14 @@
 # 📊 PredictivePulse
 
-![Python](https://img.shields.io/badge/Python-3.14-blue?n
-https://img.shields.io/badge/Pandas-Data%20Engineering-blue?logo=pandas
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-itlearn
-![Streamlit](https://img.shields.io/badge/hboard-red?logo=streamlit
-![Plotly](https://img.shields.io/badge/Plotly-e%20Charts-green?logo=plotly
-![Model](https://img.shields/Model-Random%20Forest-success
-![ROC-AUC](https://img.shields.io/badge/8225-brightgreen
+![Python](https://img.shields.io/badge/Python?logo=python
+![Pandas](https://img.shields.io/badge/Pandas-Dataring-blue?logo=pandas
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machinege?logo=scikitlearn
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-amlit
+![Plotly](https://img.shields.io/badge/Plottive%20Charts-green?logo=plotly
+![Random Forest](https://img.shields.io/badge/Modelsuccess
+![ROC-AUC](https://img.shields.io/badge/ROC--AUC-0.822en
+
+---
 
 ## 🚀 Live Demo
 
