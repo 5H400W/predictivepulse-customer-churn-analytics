@@ -405,11 +405,11 @@ streamlit run dashboard/app.py
 
 **Prashant Dwivedi**
 
-Business Analyst | Data Analytics | Data Engineering | Machine Learning
+** Machine Learning | LLM | GEN AI | RAG | Data Architect | Data Analytics | Data Engineering |**
 
-GitHub: https://github.com/YOUR_USERNAME
+GitHub: https://github.com/YOUR_USERNAME](https://github.com/5H400W)
 
-LinkedIn: https://linkedin.com/in/YOUR_PROFILE
+LinkedIn: https://linkedin.com/in/YOUR_PROFILE](https://www.linkedin.com/in/prashant-dwivedi-5532b3190/)
 
 ---
 
