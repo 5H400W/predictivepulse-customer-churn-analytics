@@ -2,8 +2,15 @@
 
 ## Executive Customer Risk Explorer
 
-[snapshot/customer-risk-explorer-snapshot.png
-](https://github.com/5H400W/predictivepulse-customer-churn-analytics/blob/main/snapshot/customer-risk-explorere-snapsot.png)
+# 📊 PredictivePulse
+ 
+!ttps://img.shields.io/badge/Python-3.14-blue?logo=python
+![Pandas](httpselds.io/badge/Pandas-Data%20Engineering-blue?logo=pandas
+![Scikit-Learn](https://img.shields.io/badgeachine%20Learning-orange?logo=scikitlearn
+![Streamlit](https://img.shields.io/badge/hboard-red?logo=streamlit
+![Plotly](https://img.shields.io/badge/Plotly-Interactivegreen?logo=plotly
+![Random Forest](https://img.shields.io/badge/Model-Random
+![ROC-AUC](https://img.shields.io/badge/ROC--AUC-0.8225-bright
 
 The Customer Risk Explorer enables business users to identify high-risk customers, review churn probabilities, and prioritize retention initiatives based on customer risk scores.
 
