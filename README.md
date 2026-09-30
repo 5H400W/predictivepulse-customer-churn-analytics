@@ -1,6 +1,6 @@
 # 📊 PredictivePulse
 
-![Python](https://img.shields.io/badge/Python?logo=python
+![Python][(https://img.shields.io/badge/Python?logo=python](https://github.com/5H400W/predictivepulse-customer-churn-analytics/blob/main/snapshot/Top-Churn-Drivers-Screenshot.png)
 ![Pandas](https://img.shields.io/badge/Pandas-Dataring-blue?logo=pandas
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machinege?logo=scikitlearn
 ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-amlit
