@@ -2,7 +2,8 @@
 
 ## Executive Customer Risk Explorer
 
-snapshot/customer-risk-explorer-snapshot.png
+[snapshot/customer-risk-explorer-snapshot.png
+](https://github.com/5H400W/predictivepulse-customer-churn-analytics/blob/main/snapshot/customer-risk-explorere-snapsot.png)
 
 The Customer Risk Explorer enables business users to identify high-risk customers, review churn probabilities, and prioritize retention initiatives based on customer risk scores.
 
